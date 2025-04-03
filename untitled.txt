@@ -1,0 +1,175 @@
+Here are the files for your website. You can copy and paste these into text editors and save them with the names. Make sure to save them in the same directory before uploading them to GitHub.
+
+### index.html
+
+```html
+
+
+
+
+
+My Simple Website
+
+
+
+
+Welcome to My Website
+
+
+
+
+Home
+
+
+About
+
+
+Contact
+
+
+Fortune Secondary School
+
+
+
+
+
+
+
+
+Home
+
+
+Welcome to my simple website. Here you can find information about me and how to get in touch.
+
+
+
+
+
+About
+
+
+I'm a web developer passionate about creating beautiful and functional websites.
+
+
+
+
+
+Contact
+
+
+You can reach me at: example@email.com
+
+
+
+
+
+
+© 2023 My Simple Website. All rights reserved.
+
+
+
+
+
+
+
+```
+
+### styles.css
+
+```css
+/* Reset default styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Set base styles */
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+color: #333;
+}
+
+/* Header styles */
+header {
+background-color: #4a4a4a;
+color: #fff;
+padding: 1rem;
+}
+
+header h1 {
+margin-bottom: 1rem;
+}
+
+/* Navigation styles */
+nav ul {
+list-style-type: none;
+display: flex;
+justify-content: space-around;
+}
+
+nav ul li a {
+color: #fff;
+text-decoration: none;
+padding: 0.5rem 1rem;
+transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+background-color: #666;
+}
+
+/* Main content styles */
+main {
+max-width: 800px;
+margin: 0 auto;
+padding: 2rem;
+}
+
+section {
+margin-bottom: 2rem;
+}
+
+h2 {
+margin-bottom: 1rem;
+}
+
+/* Footer styles */
+footer {
+background-color: #4a4a4a;
+color: #fff;
+text-align: center;
+padding: 1rem;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+```
+
+### script.js
+
+```javascript
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+// Get all navigation links
+const navLinks = document.querySelectorAll('nav a');
+
+// Add click event listeners to navigation links
+navLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+
+// Get the target section ID
+const targetId = this.getAttribute('href');
+
+// Scroll to the target section
+if (targetId.startsWith('#')) {
+document.querySelector(targetId).scrollIntoView({
+behavior: 'smooth'
+});
+}
+});
+});
+});
+```
